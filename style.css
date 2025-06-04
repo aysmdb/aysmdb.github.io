@@ -3,3 +3,16 @@
   width: 75%;
   display: grid;
 }
+
+.menu {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 100px 100px;
+  gap: 10px;
+}
+
+.menu-item {
+  margin: 10px 0px;
+}
