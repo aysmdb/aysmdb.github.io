@@ -1,17 +1,27 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>My Astro Site</h1>
-	</body>
-</html>
+<BaseLayout>
+  <article class="post">
+  <h2 class="post-title">
+    <a href="#">Getting Back to Web Basics</a>
+  </h2>
+  <div class="post-meta">Jeff Atwood · Jan 2006 · 4 min read</div>
+  <p class="post-excerpt">
+    Every few years, web design trends drift away from simplicity. Users don’t care about fancy features—
+    they just want readable text, useful content, and working navigation...
+  </p>
+</article>
+
+<article class="post">
+  <h2 class="post-title">
+    <a href="#">Design Matters – but Content is King</a>
+  </h2>
+  <div class="post-meta">Jeff Atwood · May 2006 · 3 min read</div>
+  <p class="post-excerpt">
+    A redesign can improve usability and organization, but at the end of the day, content still drives value.
+    Good structure helps—but substance matters more...
+  </p>
+</article>
+</BaseLayout>
