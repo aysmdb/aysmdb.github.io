@@ -1,27 +1,23 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
+const posts = Object.values(import.meta.glob('./posts/*.md', { eager: true}))
 ---
 
 <BaseLayout>
+  {
+    posts.map((p: any) => {
+return (
   <article class="post">
   <h2 class="post-title">
-    <a href="#">Getting Back to Web Basics</a>
+      <a href={p.url}>{p.frontmatter.title}</a>
   </h2>
-  <div class="post-meta">Jeff Atwood · Jan 2006 · 4 min read</div>
+  <div class="post-meta">Jan 2006 · 4 min read</div>
   <p class="post-excerpt">
-    Every few years, web design trends drift away from simplicity. Users don’t care about fancy features—
-    they just want readable text, useful content, and working navigation...
+      {p.frontmatter.excerpt}
   </p>
-</article>
-
-<article class="post">
-  <h2 class="post-title">
-    <a href="#">Design Matters – but Content is King</a>
-  </h2>
-  <div class="post-meta">Jeff Atwood · May 2006 · 3 min read</div>
-  <p class="post-excerpt">
-    A redesign can improve usability and organization, but at the end of the day, content still drives value.
-    Good structure helps—but substance matters more...
-  </p>
-</article>
+  </article>
+<hr />
+  )
+  })
+  }
 </BaseLayout>

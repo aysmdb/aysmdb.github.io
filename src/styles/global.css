@@ -37,7 +37,8 @@ header p {
 
 /* POSTS */
 .post {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 .post-title {
